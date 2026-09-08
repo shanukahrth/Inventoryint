@@ -1,0 +1,191 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: oklch(0.985 0.002 247);
+  --foreground: oklch(0.21 0.02 264);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.21 0.02 264);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.21 0.02 264);
+  --primary: oklch(0.42 0.16 264);
+  --primary-foreground: oklch(0.98 0.005 264);
+  --secondary: oklch(0.96 0.01 264);
+  --secondary-foreground: oklch(0.28 0.03 264);
+  --muted: oklch(0.96 0.01 264);
+  --muted-foreground: oklch(0.52 0.02 264);
+  --accent: oklch(0.94 0.03 220);
+  --accent-foreground: oklch(0.28 0.03 264);
+  --destructive: oklch(0.58 0.22 27);
+  --destructive-foreground: oklch(0.98 0.005 264);
+  --warning: oklch(0.72 0.17 65);
+  --warning-foreground: oklch(0.2 0.03 65);
+  --success: oklch(0.6 0.14 155);
+  --success-foreground: oklch(0.98 0.01 155);
+  --border: oklch(0.9 0.01 264);
+  --input: oklch(0.9 0.01 264);
+  --ring: oklch(0.55 0.12 264);
+  --radius: 0.65rem;
+
+  --sidebar: oklch(0.19 0.03 264);
+  --sidebar-foreground: oklch(0.9 0.01 264);
+  --sidebar-muted: oklch(0.62 0.03 264);
+  --sidebar-active: oklch(0.29 0.08 264);
+  --sidebar-border: oklch(0.27 0.03 264);
+
+  /* Validated categorical palette (see dataviz skill references/palette.md).
+     Assigned to series in fixed order — never cycled or re-ranked by filters. */
+  --chart-1: #2a78d6; /* blue */
+  --chart-2: #eb6834; /* orange */
+  --chart-3: #1baf7a; /* aqua */
+  --chart-4: #eda100; /* yellow */
+  --chart-5: #e87ba4; /* magenta */
+  --chart-6: #008300; /* green */
+  --chart-7: #4a3aa7; /* violet */
+  --chart-8: #e34948; /* red */
+
+  --chart-grid: #e1e0d9;
+  --chart-axis: #c3c2b7;
+  --chart-muted: #898781;
+
+  --status-good: #0ca30c;
+  --status-warning: #fab219;
+  --status-serious: #ec835a;
+  --status-critical: #d03b3b;
+}
+
+.dark {
+  --background: oklch(0.16 0.02 264);
+  --foreground: oklch(0.93 0.01 264);
+  --card: oklch(0.2 0.02 264);
+  --card-foreground: oklch(0.93 0.01 264);
+  --popover: oklch(0.2 0.02 264);
+  --popover-foreground: oklch(0.93 0.01 264);
+  --primary: oklch(0.68 0.14 264);
+  --primary-foreground: oklch(0.16 0.02 264);
+  --secondary: oklch(0.26 0.02 264);
+  --secondary-foreground: oklch(0.93 0.01 264);
+  --muted: oklch(0.26 0.02 264);
+  --muted-foreground: oklch(0.65 0.02 264);
+  --accent: oklch(0.3 0.05 220);
+  --accent-foreground: oklch(0.93 0.01 264);
+  --destructive: oklch(0.65 0.2 27);
+  --destructive-foreground: oklch(0.16 0.02 264);
+  --warning: oklch(0.75 0.16 70);
+  --warning-foreground: oklch(0.18 0.03 65);
+  --success: oklch(0.68 0.14 155);
+  --success-foreground: oklch(0.16 0.03 155);
+  --border: oklch(0.3 0.02 264);
+  --input: oklch(0.3 0.02 264);
+  --ring: oklch(0.6 0.12 264);
+
+  --sidebar: oklch(0.13 0.02 264);
+  --sidebar-foreground: oklch(0.88 0.01 264);
+  --sidebar-muted: oklch(0.58 0.02 264);
+  --sidebar-active: oklch(0.24 0.06 264);
+  --sidebar-border: oklch(0.22 0.02 264);
+
+  /* Dark-mode steps of the same eight hues, per the dataviz skill's dark column. */
+  --chart-1: #3987e5;
+  --chart-2: #d95926;
+  --chart-3: #199e70;
+  --chart-4: #c98500;
+  --chart-5: #d55181;
+  --chart-6: #008300;
+  --chart-7: #9085e9;
+  --chart-8: #e66767;
+
+  --chart-grid: #2c2c2a;
+  --chart-axis: #383835;
+  --chart-muted: #898781;
+
+  --status-good: #0ca30c;
+  --status-warning: #fab219;
+  --status-serious: #ec835a;
+  --status-critical: #d03b3b;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-muted: var(--sidebar-muted);
+  --color-sidebar-active: var(--sidebar-active);
+  --color-sidebar-border: var(--sidebar-border);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-chart-6: var(--chart-6);
+  --color-chart-7: var(--chart-7);
+  --color-chart-8: var(--chart-8);
+  --color-chart-grid: var(--chart-grid);
+  --color-chart-axis: var(--chart-axis);
+  --color-chart-muted: var(--chart-muted);
+
+  --color-status-good: var(--status-good);
+  --color-status-warning: var(--status-warning);
+  --color-status-serious: var(--status-serious);
+  --color-status-critical: var(--status-critical);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+* {
+  border-color: var(--color-border);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-feature-settings: "cv11", "ss01";
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-muted-foreground);
+  opacity: 0.3;
+  border-radius: 999px;
+}

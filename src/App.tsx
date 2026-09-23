@@ -17,6 +17,19 @@ const TelevisionIntelligence = lazy(() =>
   import('@/pages/TelevisionIntelligence').then((m) => ({ default: m.TelevisionIntelligence })),
 )
 const SkuSearch = lazy(() => import('@/pages/SkuSearch').then((m) => ({ default: m.SkuSearch })))
+const ProductFamilies = lazy(() =>
+  import('@/pages/ProductFamilies').then((m) => ({ default: m.ProductFamilies })),
+)
+const LocationAnalysis = lazy(() =>
+  import('@/pages/LocationAnalysis').then((m) => ({ default: m.LocationAnalysis })),
+)
+const AreaAnalysis = lazy(() => import('@/pages/AreaAnalysis').then((m) => ({ default: m.AreaAnalysis })))
+const DistrictAnalysis = lazy(() =>
+  import('@/pages/DistrictAnalysis').then((m) => ({ default: m.DistrictAnalysis })),
+)
+const ChannelAnalysis = lazy(() =>
+  import('@/pages/ChannelAnalysis').then((m) => ({ default: m.ChannelAnalysis })),
+)
 
 function RouteFallback() {
   return (
@@ -42,7 +55,12 @@ function App() {
         <Suspense fallback={<RouteFallback />}>
           <Routes>
             <Route path="/" element={<ExecutiveDashboard />} />
+            <Route path="/product-families" element={<ProductFamilies />} />
             <Route path="/television" element={<TelevisionIntelligence />} />
+            <Route path="/locations" element={<LocationAnalysis />} />
+            <Route path="/areas" element={<AreaAnalysis />} />
+            <Route path="/districts" element={<DistrictAnalysis />} />
+            <Route path="/channels" element={<ChannelAnalysis />} />
             <Route path="/sku-search" element={<SkuSearch />} />
             {NAV_ITEMS.filter((item) => item.status === 'planned').map((item) => (
               <Route key={item.path} path={item.path} element={<ComingSoon title={item.label} />} />

@@ -25,12 +25,12 @@ export interface NavItem {
 
 export const NAV_ITEMS: NavItem[] = [
   { label: 'Executive Summary', path: '/', icon: LayoutDashboard, status: 'ready', group: 'Overview' },
-  { label: 'Product Families', path: '/product-families', icon: Layers, status: 'planned', group: 'Analytics' },
+  { label: 'Product Families', path: '/product-families', icon: Layers, status: 'ready', group: 'Analytics' },
   { label: 'Television Analytics', path: '/television', icon: Tv, status: 'ready', group: 'Analytics' },
-  { label: 'Location Analysis', path: '/locations', icon: MapPin, status: 'planned', group: 'Analytics' },
-  { label: 'Area Analysis', path: '/areas', icon: Map, status: 'planned', group: 'Analytics' },
-  { label: 'District Analysis', path: '/districts', icon: Building2, status: 'planned', group: 'Analytics' },
-  { label: 'Channel Analysis', path: '/channels', icon: Milestone, status: 'planned', group: 'Analytics' },
+  { label: 'Location Analysis', path: '/locations', icon: MapPin, status: 'ready', group: 'Analytics' },
+  { label: 'Area Analysis', path: '/areas', icon: Map, status: 'ready', group: 'Analytics' },
+  { label: 'District Analysis', path: '/districts', icon: Building2, status: 'ready', group: 'Analytics' },
+  { label: 'Channel Analysis', path: '/channels', icon: Milestone, status: 'ready', group: 'Analytics' },
   { label: 'Heat Maps', path: '/heat-maps', icon: Grid3x3, status: 'planned', group: 'Analytics' },
   { label: 'SKU Search', path: '/sku-search', icon: Search, status: 'ready', group: 'Tools' },
   { label: 'Inventory Intelligence', path: '/intelligence', icon: Sparkles, status: 'planned', group: 'Tools' },
